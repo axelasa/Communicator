@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:layout_marginEnd="5dp"
     android:layout_marginStart="5dp"
+    android:background="#ffffff"
+    android:backgroundTint="#ffffff"
     tools:context=".TextToSpeech">
 
     <TextView
@@ -14,7 +16,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="TEXT TO SPEECH"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textColor="#B0B0B000"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,8 +54,9 @@
         android:layout_marginEnd="5dp"
         android:text="Click to SpeakOut"
         android:backgroundTint="@color/white"
-        android:textColor="#B0B0B000"
-        android:background="@drawable/btn_rounded_green_lining"
+        android:textColor="#ffffff"
+        android:background="#800080"
+        android:shadowColor="#800080"
         app:layout_constraintTop_toBottomOf="@id/edtText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
