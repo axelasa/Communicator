@@ -16,8 +16,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="TEXT TO SPEECH"
+        android:layout_marginTop="15dp"
         android:textSize="25sp"
-        android:textColor="#B0B0B000"
+        android:textColor="#4287f5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,37 +30,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:gravity="center"
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="15dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:gravity="center"
         android:hint="enter your text here....."
-        app:layout_constraintTop_toBottomOf="@id/title"
+        android:inputType="text"
+        android:textColorHint="#b6b9bf"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:ems="10" >
+        app:layout_constraintTop_toBottomOf="@id/title">
+
         <requestFocus />
 
-        </EditText>
+    </EditText>
 
     <Button
         android:id="@+id/speech"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:text="Click to SpeakOut"
-        android:backgroundTint="@color/white"
-        android:textColor="#ffffff"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
         android:background="#800080"
+        android:backgroundTint="@color/white"
         android:shadowColor="#800080"
-        app:layout_constraintTop_toBottomOf="@id/edtText"
+        android:text="Click to SpeakOut"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtText" />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Go To (SPEECH TO TEXT)"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/speech"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

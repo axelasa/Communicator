@@ -1,9 +1,11 @@
 package com.example.communicator
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,6 +16,7 @@ class TextToSpeech : AppCompatActivity(),TextToSpeech.OnInitListener {
     lateinit var textToSpeech: TextToSpeech
     lateinit var speak:Button
     lateinit var type:EditText
+    lateinit var back:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +24,15 @@ class TextToSpeech : AppCompatActivity(),TextToSpeech.OnInitListener {
 
         speak = findViewById(R.id.speech)
         type = findViewById(R.id.edtText)
+        back = findViewById(R.id.back)
+
         textToSpeech = TextToSpeech(this,this)
 
         speak.setOnClickListener {
             readText()
+        }
+        back.setOnClickListener {
+            previous()
         }
 
     }
@@ -66,5 +74,11 @@ class TextToSpeech : AppCompatActivity(),TextToSpeech.OnInitListener {
         textToSpeech.stop()
         textToSpeech.shutdown()
         super.onDestroy()
+    }
+
+    private fun previous(){
+        Log.e("BUTTON","I HAVE BEEN CLICKED")
+           val intent = Intent(this, SpeechToText::class.java)
+        startActivity(intent)
     }
 }
